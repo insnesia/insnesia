@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zona waktu Sholat</title>
+    <link href="widget.api.v1.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="margin:auto; border:1px solid #c0c0c0" id="prayer-container">
+        <div class="prayer_time">Zona Waktu Sholat</div>
+        <div id="kuto"></div>
+        <div id="prayer_date"></div>
+        <span id="hari"></span> <span id="bulan"></span> <span id="hijr"></span>
+        <div id="prayer_clock"></div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Imsak</th>
+                    <td id="Imsak"></td>
+                </tr>
+                <tr>
+                    <th>Subuh</th>
+                    <td id="Fajr"></td>
+                </tr>
+                <tr>
+                    <th>Terbit</th>
+                    <td id="Terbit"></td>
+                </tr>
+                <tr>
+                    <th>Dzuhur</th>
+                    <td id="Dhuhr"></td>
+                </tr>
+                <tr>
+                    <th>Asar</th>
+                    <td id="Asr"></td>
+                </tr>
+                <tr>
+                    <th>Terbenam</th>
+                    <td id="Sunset"></td>
+                </tr>
+                <tr>
+                    <th>Maghrib</th>
+                    <td id="Maghrib"></td>
+                </tr>
+                <tr>
+                    <th>Isya</th>
+                    <td id="Isha"></td>
+                </tr>
+                <tr>
+                    <th>Tengah Malam</th>
+                    <td id="Bengi"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var api_url = 'https://api.aladhan.com/v1/timingsByCity?city=baturaja&country=Indonesia&method=1';
+        document.addEventListener("DOMContentLoaded", function () {
+            SAPrayerApi();
+        });
+    </script>
+    <script src="widget.api.v1.js" defer></script>
+</body>
+</html>
